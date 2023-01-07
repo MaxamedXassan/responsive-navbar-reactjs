@@ -1,3 +1,8 @@
+
+
+body {
+    background: black;
+}
 .navbar {
     display: flex;
     align-items: center;
@@ -7,23 +12,24 @@
     color: #fff;
 }
 
-#menu {
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 }
 
-#menu li {
+.menu li {
     list-style: none;
     padding: 0 20px;
 }
 
-#menu a {
+.menu a {
     text-decoration: none;
     color: #fff;
 }
 
-#menu li a:hover {
+.menu li a:hover {
     color: #24f124;
 }
 
@@ -43,7 +49,8 @@
 } */
 
 @media screen and (max-width: 640px) {
-    #menu {
+    .menu {
+       
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -52,15 +59,20 @@
         background: rgb(0, 0, 0, 0.9);
         position: absolute;
         top: 0;
-        left: 0;
+        left: -100%;
         z-index: -3;
     }
 
-    #menu li {
+    
+    .menu.active {
+        left: 0;
+    }
+
+    .menu li {
         padding: 1rem 0;
     }
 
-    #menu li a {
+    .menu li a {
         font-size: 2rem;
     }
 
